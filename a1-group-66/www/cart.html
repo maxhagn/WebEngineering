@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Cart</title>
+
+  <style>
+    .sample-frame-1 {
+      box-sizing: border-box;
+      border-image-source: url(frame-styles/classic.jpg) !important;
+      border-image-slice: 115 !important;
+      border-width: 32px !important;
+      background-color: rgb(224, 230, 212);
+      padding: 0px !important;
+    }
+
+    .sample-frame-2 {
+      box-sizing: border-box;
+      border-image-source: url(frame-styles/natural.jpg) !important;
+      border-image-slice: 75 !important;
+      border-width: 16px !important;
+      background-color: rgb(224, 230, 212);
+      padding: 8px !important;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav_item">
+    <img alt="Artmart Logo" class="nav_logo" src="artmart_logo.png">
+  </div>
+  <div class="nav_item">
+    <div class="nav_link">Search</div>
+    <div class="nav_link">Cart (2)</div>
+  </div>
+</nav>
+
+<main>
+  <section class="cart">
+    <div class="cart-item">
+      <div class="cart-preview">
+        <a href="config.html">
+          <img class="cart-thumb sample-frame-1" src="met-objects/DT3077.jpg" width="199" height="249" alt="Portrait of a Young Man">
+        </a>
+      </div>
+      <div class="cart-label">
+        <span class="label_heading">Hans Memling</span>
+        <span class="label_italic">Portrait of a Young Man, </span><span>&nbsp;ca. 1472&minus;75</span>
+        <span class="label_description">Small print in a 5 cm classic frame</span>
+
+        <span class="label_pricing">&euro; 80.00</span>
+
+        <div class="cart_cancel_button">x</div>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <div class="cart-preview">
+        <a href="config.html">
+          <img class="cart-thumb sample-frame-2" src="met-objects/DT1567.jpg" width="250" height="207" alt="Wheat Field with Cypresses">
+        </a>
+      </div>
+      <div class="cart-label">
+        <span class="label_heading">Vincent van Gogh</span>
+        <span class="label_italic">Wheat Field with Cypresses,</span><span>&nbsp;1889</span>
+        <span class="label_description">Medium print in a 3.3 cm natural frame with a 1.7 cm mint mat.</span>
+
+        <span class="label_pricing">&euro; 114.50</span>
+
+        <div class="cart_cancel_button">x</div>
+      </div>
+    </div>
+
+    <div class="cart-item payment-container">
+      <div class="payment-label">
+        <span class="payment-text">Total: &euro; 194.50</span>
+
+        <button type="button">Checkout</button>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+
+</html>

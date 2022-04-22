@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A3 Test Report</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 4rem;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td {
+            border-top: 1px solid black;
+            padding: 0.5em 0;
+        }
+
+        .passed {
+            background-color: lightgreen;
+        }
+
+        .passed>td:first-child::before {
+            content: '✓';
+            padding: 0.5em;
+        }
+
+        .failed {
+            background-color: lightcoral;
+        }
+
+        .failed>td:first-child::before {
+            content: '✘';
+            padding: 0.5em;
+        }
+
+        .pending {
+            background-color: gainsboro;
+        }
+
+        .pending>td:first-child::before {
+            content: '?';
+            padding: 0.5em;
+        }
+
+        .error>td {
+            padding: 1em;
+            white-space: pre-wrap;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+
+        .screenshots>td {
+            padding: 1em;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .screenshots>td>div {
+            display: flex;            
+        }
+
+        figure {
+            white-space: initial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.5em;
+        }
+
+        figcaption {
+            font-size: small;
+            margin-top: 0.5em;
+        }
+
+        img {
+            border: 1px solid blue;
+            width: 100%;
+        }
+
+        .points {
+            text-align: right;
+            padding-right: 1em;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>A3 Test Report<span style="float: right;">18 points </span></h1>
+    2020-05-17 20:15:14 UTC<br>
+    40 tests &mdash; 36 passed / 4 failed<br>
+    <br>
+    20 points<br>
+    &minus;2 points for failed tests<br>
+    = 18 points total<br>
+    <br>
+    Random seed: 1234567890<br>
+
+    <h2>artworks.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>GET &#x2F;artworks&#x2F;{id} returns the right artwork</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks&#x2F;{id} returns an error for unknown artworks</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks&#x2F;{id} uses a cache</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks returns selected highlights</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks uses a cache</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks?q returns the right search results</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks?q handles empty results correctly</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks?q uses a cache (shallow)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;artworks?q uses a cache (deep)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>cart.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>GET &#x2F;cart creates a new session with an empty cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;cart returns a previously created shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;cart returns an error if a given session ID is invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart adds an item to the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart adds two items to the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart returns an error if the session ID is missing or invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart strips out unnecessary fields</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart returns error codes for all invalid or missing fields</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart works correctly with multiple carts</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>DELETE &#x2F;cart clears the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>DELETE &#x2F;cart returns an error if the session ID is missing or invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;cart&#x2F;{id} returns the correct shopping cart item</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;cart&#x2F;{id} returns an error if the session ID is missing or invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;cart&#x2F;{id} returns an error if no item with the given ID exists</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>DELETE &#x2F;cart&#x2F;{id} removes the correct shopping cart item</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>DELETE &#x2F;cart&#x2F;{id} returns an error if the session ID is missing or invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>DELETE &#x2F;cart&#x2F;{id} returns an error if no item with the given ID exists</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>checkout.test.js</h2>
+    <table>
+        <tr class="failed">
+            <td>POST &#x2F;cart&#x2F;checkout creates a payment intent with Bling</td>
+            <td class="points">&minus;0.5</td>
+        </tr>
+
+        <tr class="error">
+            <td colspan=2>Error: Unexpected result for POST &#x2F;cart&#x2F;checkout
+
+expected 200 &quot;OK&quot;, got 400 &quot;Bad Request&quot;
+    at Test.Object.&lt;anonymous&gt;.Test._assertStatus (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:268:12)
+    at Test.Object.&lt;anonymous&gt;.Test._assertFunction (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:283:11)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:173:18)
+    at Server.localAssert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:131:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Server.emit (events.js:311:20)
+    at emitCloseNT (net.js:1653:8)
+    at processTicksAndRejections (internal&#x2F;process&#x2F;task_queues.js:83:21)</td>
+        </tr>
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart&#x2F;checkout returns an error if the session ID is missing or invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart&#x2F;checkout returns an error if the cart is empty</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart&#x2F;checkout returns an error if the customer information is invalid</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="failed">
+            <td>POST &#x2F;cart&#x2F;checkout&#x2F;payment-update creates the correct receipt</td>
+            <td class="points">&minus;0.5</td>
+        </tr>
+
+        <tr class="error">
+            <td colspan=2>Error: Unexpected result for POST &#x2F;cart&#x2F;checkout
+
+expected 200 &quot;OK&quot;, got 400 &quot;Bad Request&quot;
+    at Test.Object.&lt;anonymous&gt;.Test._assertStatus (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:268:12)
+    at Test.Object.&lt;anonymous&gt;.Test._assertFunction (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:283:11)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:173:18)
+    at Server.localAssert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:131:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Server.emit (events.js:311:20)
+    at emitCloseNT (net.js:1653:8)
+    at processTicksAndRejections (internal&#x2F;process&#x2F;task_queues.js:83:21)</td>
+        </tr>
+
+
+        <tr class="failed">
+            <td>POST &#x2F;cart&#x2F;checkout&#x2F;payment-update clears shopping cart if order was succesful</td>
+            <td class="points">&minus;0.5</td>
+        </tr>
+
+        <tr class="error">
+            <td colspan=2>Error: Unexpected result for POST &#x2F;cart&#x2F;checkout
+
+expected 200 &quot;OK&quot;, got 400 &quot;Bad Request&quot;
+    at Test.Object.&lt;anonymous&gt;.Test._assertStatus (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:268:12)
+    at Test.Object.&lt;anonymous&gt;.Test._assertFunction (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:283:11)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:173:18)
+    at Server.localAssert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:131:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Server.emit (events.js:311:20)
+    at emitCloseNT (net.js:1653:8)
+    at processTicksAndRejections (internal&#x2F;process&#x2F;task_queues.js:83:21)</td>
+        </tr>
+
+
+        <tr class="failed">
+            <td>POST &#x2F;cart&#x2F;checkout&#x2F;payment-update handles failed payments correctly</td>
+            <td class="points">&minus;0.5</td>
+        </tr>
+
+        <tr class="error">
+            <td colspan=2>Error: Unexpected result for POST &#x2F;cart&#x2F;checkout
+
+expected 200 &quot;OK&quot;, got 400 &quot;Bad Request&quot;
+    at Test.Object.&lt;anonymous&gt;.Test._assertStatus (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:268:12)
+    at Test.Object.&lt;anonymous&gt;.Test._assertFunction (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:283:11)
+    at Test.Object.&lt;anonymous&gt;.Test.assert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:173:18)
+    at Server.localAssert (&#x2F;Users&#x2F;pascalporemba&#x2F;Desktop&#x2F;Studium&#x2F;4. Semester&#x2F;WebEngineering&#x2F;a3-group-66&#x2F;node_modules&#x2F;supertest&#x2F;lib&#x2F;test.js:131:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Server.emit (events.js:311:20)
+    at emitCloseNT (net.js:1653:8)
+    at processTicksAndRejections (internal&#x2F;process&#x2F;task_queues.js:83:21)</td>
+        </tr>
+
+
+        <tr class="passed">
+            <td>POST &#x2F;cart&#x2F;checkout&#x2F;payment-update returns an error for illegitimate requests</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>frames.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>GET &#x2F;frames returns available frame styles</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;frames&#x2F;{style}&#x2F;{imageType} returns the right image</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;frames&#x2F;{style}&#x2F;{imageType} returns an error for unknown frame styles</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>GET &#x2F;frames&#x2F;{style}&#x2F;{imageType} returns an error for unknown image types</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>mats.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>GET &#x2F;mats returns available mat colors</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>shipping.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>GET &#x2F;shipping returns available shipping destinations</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+{
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/test-utils": "^1.0.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "canvas": "^2.6.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "fetch-mock": "^9.5.1",
+    "fetch-mock-jest": "^1.3.0",
+    "flush-promises": "^1.0.2",
+    "jest": "^26.0.1",
+    "jest-chance": "^0.1.8",
+    "jest-expect-message": "^1.0.2",
+    "js-cookie": "^2.2.1",
+    "jsdom": "^16.2.2",
+    "jsdom-global": "^3.0.2",
+    "mustache": "^4.0.1",
+    "node-fetch": "^2.6.0",
+    "strip-ansi": "^6.0.0",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-expect-message"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "reporters": [
+      "default",
+      [
+        "./test/jest-tuwien/reporter.js",
+        {
+          "title": "A4",
+          "maxPoints": 20,
+          "defaultMinusPoints": 0.5
+        }
+      ]
+    ],
+    "globals": {
+      "__SEED__": 1
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

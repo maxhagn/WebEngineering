@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A2 Test Report</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 4rem;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td {
+            border-top: 1px solid black;
+            padding: 0.5em 0;
+        }
+
+        .passed {
+            background-color: lightgreen;
+        }
+
+        .passed>td:first-child::before {
+            content: '✓';
+            padding: 0.5em;
+        }
+
+        .failed {
+            background-color: lightcoral;
+        }
+
+        .failed>td:first-child::before {
+            content: '✘';
+            padding: 0.5em;
+        }
+
+        .pending {
+            background-color: gainsboro;
+        }
+
+        .pending>td:first-child::before {
+            content: '?';
+            padding: 0.5em;
+        }
+
+        .error>td {
+            padding: 1em;
+            white-space: pre-wrap;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+
+        .screenshots>td {
+            padding: 1em;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .screenshots>td>div {
+            display: flex;            
+        }
+
+        figure {
+            white-space: initial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.5em;
+        }
+
+        figcaption {
+            font-size: small;
+            margin-top: 0.5em;
+        }
+
+        img {
+            border: 1px solid blue;
+            width: 100%;
+        }
+
+        .points {
+            text-align: right;
+            padding-right: 1em;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>A2 Test Report<span style="float: right;">25 points 🥳</span></h1>
+    2020-04-26 10:38:06 UTC<br>
+    40 tests &mdash; 40 passed / 0 failed<br>
+    <br>
+    25 points<br>
+    &minus;0 points for failed tests<br>
+    = 25 points total<br>
+    <br>
+    Random seed: 1234567890<br>
+
+    <h2>cart.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Shopping Cart has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart shows empty message</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart displays items</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart items display textual frame descriptions</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart items link to configurator</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart displays correct total price</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart removes items correctly</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart caches Met objects</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart shows correct number of cart items</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>checkout.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Checkout has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout redirects if cart is empty</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout uses the shipping API</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout shows the correct subtotal</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout calculates shipping costs correctly</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout shows the correct total</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout gracefully handles shipping API errors</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>config.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Frame Configurator has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator loads the correct artwork</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator redirects if no object ID given</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator redirects if object does not exist</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator accepts query parameters to set values</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator frame width field is connected to slider</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator frame width stays within range</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator updates preview when configuration changes</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator mat width field is connected to slider</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator mat width stays within range</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator calculates price correctly</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator caches Met objects</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Frame Configurator shows correct number of cart items</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>search.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Search has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search works via query parameter</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search works via search field</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search displays the correct text while searching</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search displays the correct text when the search is done</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search considers only artworks that actually have images</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search displays no more than 100 results</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search displays a selection of highlights if no search term was given</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search displays the right text if no search term was given</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search caches Met objects</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search shows correct number of cart items</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A1 Test Report</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 4rem;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td {
+            border-top: 1px solid black;
+            padding: 0.5em 0;
+        }
+
+        .passed {
+            background-color: lightgreen;
+        }
+
+        .passed>td:first-child::before {
+            content: '✓';
+            padding: 0.5em;
+        }
+
+        .failed {
+            background-color: lightcoral;
+        }
+
+        .failed>td:first-child::before {
+            content: '✘';
+            padding: 0.5em;
+        }
+
+        .pending {
+            background-color: gainsboro;
+        }
+
+        .pending>td:first-child::before {
+            content: '?';
+            padding: 0.5em;
+        }
+
+        .error>td {
+            padding: 1em;
+            white-space: pre-wrap;
+        }
+
+        .screenshots>td {
+            padding: 1em;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .screenshots>td>div {
+            display: flex;            
+        }
+
+        figure {
+            white-space: initial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.5em;
+        }
+
+        figcaption {
+            font-size: small;
+            margin-top: 0.5em;
+        }
+
+        img {
+            border: 1px solid blue;
+            width: 100%;
+        }
+
+        .points {
+            text-align: right;
+            padding-right: 1em;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>A1 Test Report<span style="float: right;">6 points </span></h1>
+    2020-03-27 09:21:43 UTC<br>
+    20 tests &mdash; 12 passed / 8 failed<br>
+    <br>
+    25 points<br>
+    &minus;19 points for failed tests<br>
+    = 6 points total<br>
+
+    <h2>cart.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Shopping Cart looks right on small desktop (800px width)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart looks right on large desktop (1920px width)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="failed">
+            <td>Shopping Cart looks right on mobile (414px width)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 1.74 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;cart-test-js-shopping-cart-looks-right-on-mobile-414-px-width-visual-1-5-1-fc38a.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;cart-test-js-shopping-cart-looks-right-on-mobile-414-px-width-visual-1-5-1-fc38a.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;cart-test-js-shopping-cart-looks-right-on-mobile-414-px-width-visual-1-5-1-fc38a.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;cart-test-js-shopping-cart-looks-right-on-mobile-414-px-width-visual-1-5-1-fc38a.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;cart-test-js-shopping-cart-looks-right-on-mobile-414-px-width-visual-1-5-1-fc38a.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;cart-test-js-shopping-cart-looks-right-on-mobile-414-px-width-visual-1-5-1-fc38a.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="passed">
+            <td>Shopping Cart has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Shopping Cart does not use JavaScript</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>checkout.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Checkout looks right on small desktop (800px width)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout looks right on large desktop (1920px width)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout looks right on mobile (414px width)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout does not use JavaScript</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>config.test.js</h2>
+    <table>
+        <tr class="failed">
+            <td>Frame Configurator looks right on small desktop (800px width)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 33.84 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-small-desktop-800-px-width-visual-1-5-1-06ed7.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-small-desktop-800-px-width-visual-1-5-1-06ed7.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-small-desktop-800-px-width-visual-1-5-1-06ed7.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-small-desktop-800-px-width-visual-1-5-1-06ed7.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-small-desktop-800-px-width-visual-1-5-1-06ed7.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-small-desktop-800-px-width-visual-1-5-1-06ed7.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="failed">
+            <td>Frame Configurator looks right on large desktop (1920px width)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 23.41 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-8ad15.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-8ad15.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-8ad15.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-8ad15.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-8ad15.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-8ad15.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="failed">
+            <td>Frame Configurator looks right on mobile (414px width)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 43.17 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-mobile-414-px-width-visual-1-5-1-c4937.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-mobile-414-px-width-visual-1-5-1-c4937.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-mobile-414-px-width-visual-1-5-1-c4937.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-mobile-414-px-width-visual-1-5-1-c4937.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-mobile-414-px-width-visual-1-5-1-c4937.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;config-test-js-frame-configurator-looks-right-on-mobile-414-px-width-visual-1-5-1-c4937.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="failed">
+            <td>Frame Configurator has valid HTML</td>
+            <td class="points">&minus;8.5</td>
+        </tr>
+
+        <tr class="error">
+            <td colspan=2>config.html:75:6: &lt;form&gt; element must have a submit button</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:83:14: Element &lt;p&gt; is not permitted as content in &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:84:14: Element &lt;p&gt; is not permitted as content in &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:86:12: &lt;input&gt; element does not have a &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:88:14: Element &lt;p&gt; is not permitted as content in &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:89:14: Element &lt;p&gt; is not permitted as content in &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:92:14: Element &lt;p&gt; is not permitted as content in &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:93:14: Element &lt;p&gt; is not permitted as content in &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:106:14: &lt;input&gt; element does not have a &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:143:14: &lt;input&gt; element does not have a &lt;label&gt;</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:177:8: Element &lt;p&gt; is implicitly closed by sibling</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:184:8: Mismatched close-tag, expected &#39;&lt;&#x2F;form&gt;&#39; but found &#39;&lt;&#x2F;p&gt;&#39;.</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:189:6: Mismatched close-tag, expected &#39;&lt;&#x2F;section&gt;&#39; but found &#39;&lt;&#x2F;form&gt;&#39;.</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:190:4: Mismatched close-tag, expected &#39;&lt;&#x2F;main&gt;&#39; but found &#39;&lt;&#x2F;section&gt;&#39;.</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:191:2: Mismatched close-tag, expected &#39;&lt;&#x2F;body&gt;&#39; but found &#39;&lt;&#x2F;main&gt;&#39;.</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:192:2: Mismatched close-tag, expected &#39;&lt;&#x2F;html&gt;&#39; but found &#39;&lt;&#x2F;body&gt;&#39;.</td>
+        </tr>
+        <tr class="error">
+            <td colspan=2>config.html:194:2: Unexpected close-tag, expected opening tag.</td>
+        </tr>
+
+
+        <tr class="passed">
+            <td>Frame Configurator does not use JavaScript</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>search.test.js</h2>
+    <table>
+        <tr class="failed">
+            <td>Search looks right on small desktop (800px width)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 84.32 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-small-desktop-800-px-width-visual-1-5-1-3429f.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-small-desktop-800-px-width-visual-1-5-1-3429f.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-small-desktop-800-px-width-visual-1-5-1-3429f.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-small-desktop-800-px-width-visual-1-5-1-3429f.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-small-desktop-800-px-width-visual-1-5-1-3429f.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-small-desktop-800-px-width-visual-1-5-1-3429f.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="failed">
+            <td>Search looks right on large desktop (1920px width)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 53.10 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-5ebc1.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-5ebc1.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-5ebc1.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-5ebc1.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-5ebc1.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-large-desktop-1920-px-width-visual-1-5-1-5ebc1.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="failed">
+            <td>Search looks right on mobile (414 x 736)</td>
+            <td class="points">&minus;1.5</td>
+        </tr>
+
+
+        <tr class="error">
+            <td colspan=2>Your page is 26.46 % different from the reference screenshot.</td>
+        </tr>
+        <tr class="screenshots">
+            <td colspan=2>
+                <div>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-mobile-414-x-736-visual-1-5-1-f8719.snap.png&#x2F;received.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-mobile-414-x-736-visual-1-5-1-f8719.snap.png&#x2F;received.png"></a>
+                        <figcaption>Your Page</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-mobile-414-x-736-visual-1-5-1-f8719.snap.png&#x2F;diff.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-mobile-414-x-736-visual-1-5-1-f8719.snap.png&#x2F;diff.png"></a>
+                        <figcaption>Diff</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-mobile-414-x-736-visual-1-5-1-f8719.snap.png&#x2F;snapshot.png"><img src="jest-screenshot-report&#x2F;reports&#x2F;search-test-js-search-looks-right-on-mobile-414-x-736-visual-1-5-1-f8719.snap.png&#x2F;snapshot.png"></a>
+                        <figcaption>Reference</figcaption>
+                    </figure>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="passed">
+            <td>Search has valid HTML</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Search does not use JavaScript</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+</body>
+
+</html>

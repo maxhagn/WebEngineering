@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Frame Configurator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+    .sample-wrapper {
+      width: 100%;
+    }
+
+    .sample-frame {
+      box-sizing: border-box;
+      border-image-source: url(frame-styles/classic.jpg) !important;
+      border-image-slice: 115 !important;
+      border-width: 14px !important;
+      background-color: rgb(41, 67, 76);
+      padding: 22px !important;
+      width: 100%;
+      height: auto;
+      max-height: 364px;
+    }
+
+    #test{
+      background-color: #50222d;
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+
+<!-- Header of the page -->
+<nav class="nav">
+  <div class="nav_item">
+    <img alt="Artmart Logo" class="nav_logo" src="artmart_logo.png">
+  </div>
+  <div class="nav_item">
+    <div class="nav_link">Search</div>
+    <div class="nav_link">Cart (2)</div>
+  </div>
+</nav>
+
+
+<main class="config-main">
+
+  <section class="configurator">
+
+    <!-- Preview of the picture which gets configured -->
+    <div class="preview">
+      <div class="sample-wrapper">
+        <img src="met-objects/DP141042.jpg" alt="Under the Wave of Kanagawa, by Katsushika Hokusai"
+             id="preview-image" class="sample-frame">
+      </div>
+    </div>
+
+    <!-- Caption & Description of the image -->
+    <div>
+      <h2>Katsushika Hokusai</h2>
+      <div>
+        <p>
+          <i> Under the wave of Kanagawa (Kanagawa oki nami ura), or the Great Wave, from the series Thirty-six
+            Views of Mount Fuji (Fugaku sanj&umacr;rokkei), ca 1830-32</i>
+        </p>
+      </div>
+    </div>
+
+    <!-- Inputs -->
+    <form class="museum-label" id="config-form" action="cart.html">
+
+      <!-- Selection of an Image-Size -->
+      <fieldset>
+        <legend></legend>
+        <div class="segmented">
+          <input type="radio" name="image-size" id="small">
+          <label for="small">
+            <p>Small</p>
+            <p>29.7 &times; 20.2 cm</p>
+          </label>
+          <input type="radio" name="image-size" id="medium">
+          <label>
+            <p>Medium</p>
+            <p>42 &times; 28.7 cm</p>
+          </label>
+          <label>
+            <p>Large</p>
+            <p>59.4 &times; 40.5 cm</p>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Frame-Size Selection -->
+      <fieldset>
+        <legend></legend>
+        <div>
+          <span>Frame</span>
+          <span><input type="number" id="frame-size" name="frame-size" value="2"><label
+                  for="frame-size">cm</label></span>
+          <div>
+            <input type="range" name="frame-size" value="0" id = "test">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Frame-Type Selection -->
+      <fieldset>
+        <legend></legend>
+        <div class="frame-style-row">
+          <div class="frame-style-item">
+            <input type="radio" id="frame-style-classic" name="frameStyle" value="classic" checked>
+            <label for="frame-style-classic"><img src="frame-styles/classic-thumb.png" alt="Classic">Classic</label>
+          </div>
+          <div class="frame-style-item">
+            <input type="radio" id="frame-style-natural" name="frameStyle" value="natural">
+            <label for="frame-style-natural"><img src="frame-styles/natural-thumb.png" alt="Natural">Natural</label>
+          </div>
+          <div class="frame-style-item">
+            <input type="radio" id="frame-style-antique" name="frameStyle" value="shabby">
+            <label for="frame-style-antique"><img src="frame-styles/shabby-thumb.png"
+                                                  alt="Shabby">Shabby</label>
+          </div>
+          <div class="frame-style-item">
+            <input type="radio" id="frame-style-elegant" name="frameStyle" value="elegant">
+            <label for="frame-style-elegant"><img src="frame-styles/elegant-thumb.png" alt="Elegant">Elegant</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Mat Selection -->
+      <fieldset>
+        <legend></legend>
+        <div>
+          <span>Frame</span>
+          <span><input type="number" id="mat-value" name="mat-value" value="2"><label
+                  for="mat-value">cm</label></span>
+          <div>
+            <input type="range" name="mat-value" value="0">
+          </div>
+        </div>
+      </fieldset>
+
+
+      <!-- Frame-Color Selection -->
+      <fieldset>
+        <legend></legend>
+        <div class="mat-color-row">
+          <div class="mat-color-item">
+            <input type="radio" id="mat-color-ivory" name="matColor" value="ivory">
+            <label for="mat-color-ivory">Ivory</label>
+          </div>
+          <div class="mat-color-item">
+            <input type="radio" id="mat-color-mint" name="matColor" value="mint">
+            <label for="mat-color-mint">Mint</label>
+          </div>
+          <div class="mat-color-item">
+            <input type="radio" id="mat-color-wine" name="matColor" value="wine">
+            <label for="mat-color-wine">Wine</label>
+          </div>
+          <div class="mat-color-item">
+            <input type="radio" id="mat-color-indigo" name="matColor" value="indigo" checked>
+            <label for="mat-color-indigo">Indigo</label>
+          </div>
+          <div class="mat-color-item">
+            <input type="radio" id="mat-color-coal" name="matColor" value="coal">
+            <label for="mat-color-coal">Coal</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Information about pricing & sizing -->
+      <p>
+      <p>
+        <span>Price (excl. shipping): </span><span><b>&euro; 180.25</b></span>
+      </p>
+      <p>
+        <span>Total Size (incl. frame and mat): </span><span>69.4 &times; 50.5 cm</span>
+      </p>
+      </p>
+
+      <!-- "Add to Cart" Button -->
+      <button type="submit">Add to Cart</button>
+
+    </form>
+  </section>
+</main>
+</body>
+
+</html>

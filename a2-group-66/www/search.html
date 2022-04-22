@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Search | Artmart</title>
+
+  <script src="essentials.js"> </script>
+
+  <script type="module">
+
+    import * as searchAPI from './search.js';
+
+    async function artSearch(q) {
+
+      let searchinfo = document.getElementById('search-info');
+
+     searchinfo.innerText = "Searching for “" + q + "”...";
+
+      const artworks = await searchAPI.retrieve(q);
+      if(!artworks) {
+        searchinfo.innerText = "Found 0 artworks for “" + q + "”";
+        return;
+      }
+
+      if(artworks.length == 1) { searchinfo.innerText = "Found " + artworks.length + " artwork for “" + q + "”"; }
+     else  searchinfo.innerText = "Found " + artworks.length + " artworks for “" + q + "”";
+
+
+      for (let i = 0; i < artworks.length; i++) {
+        //add artwork html element
+      searchAPI.display(artworks[i], i);
+      }
+
+       localStorage[q]= JSON.stringify(artworks);
+
+    }
+
+
+    document.addEventListener('DOMContentLoaded', event => { // reacts to url with search query in it
+
+    // localStorage.clear();
+      /////number of cartitems
+     var items = getLocalStorage("cart");
+      document.getElementById("cart-count").innerText = " (" + items.length + ")";
+
+      const params = (new URL(document.location)).searchParams;
+     // console.log(document.location);
+     // console.log(params.get('q'));
+
+
+      const stringQuery = params.get('q');
+      if(!stringQuery) {
+        searchAPI.loadHighlights();
+        return;
+      }
+
+      document.getElementById('search').value = stringQuery;
+
+      artSearch(stringQuery);
+    });
+
+
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('click', event => event.target.style.border = '');
+
+    const form = document.querySelector('.search-form');
+
+    form.addEventListener('submit', event => {
+      const searchInput = document.getElementById('search');
+
+     // console.log(searchInput.value.q);
+
+      if(!searchInput.value) {
+        searchInput.style.border = "1px solid red";
+        //prevents default HTML form behavior on submitting  Found 0 artworks for “null”
+        event.preventDefault();
+      }
+    });
+
+
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <a href="search.html">
+      <img src="artmart_logo.png" alt="Artmart" class="logo">
+    </a>
+    <nav>
+      <a href="search.html">Search</a>
+      <a href="cart.html" id="cart-link">Cart</a> <span id="cart-count"></span>
+    </nav>
+  </header>
+
+  <main>
+    <form role="search" class="search-form">
+      <input type="search" id="search" name="q" placeholder="Search the collection" aria-labelledby="search-button">
+      <button type="submit" id="search-button">Search</button>
+    </form>
+
+    <h2 class="search-info" id="search-info">Search our collection of more than 400,000 artworks.</h2>
+
+
+    <section class="gallery" id="gallery">
+    </section>
+
+  </main>
+
+</body>
+
+</html>
+
+
+<!--
+-) For each search result, link the artwork image to the corresponding frame configurator page.
+
+-->

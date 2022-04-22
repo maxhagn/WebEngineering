@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A4 Test Report</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 4rem;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td {
+            border-top: 1px solid black;
+            padding: 0.5em 0;
+        }
+
+        .passed {
+            background-color: lightgreen;
+        }
+
+        .passed>td:first-child::before {
+            content: '✓';
+            padding: 0.5em;
+        }
+
+        .failed {
+            background-color: lightcoral;
+        }
+
+        .failed>td:first-child::before {
+            content: '✘';
+            padding: 0.5em;
+        }
+
+        .pending {
+            background-color: gainsboro;
+        }
+
+        .pending>td:first-child::before {
+            content: '?';
+            padding: 0.5em;
+        }
+
+        .error>td {
+            padding: 1em;
+            white-space: pre-wrap;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+
+        .screenshots>td {
+            padding: 1em;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .screenshots>td>div {
+            display: flex;            
+        }
+
+        figure {
+            white-space: initial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.5em;
+        }
+
+        figcaption {
+            font-size: small;
+            margin-top: 0.5em;
+        }
+
+        img {
+            border: 1px solid blue;
+            width: 100%;
+        }
+
+        .points {
+            text-align: right;
+            padding-right: 1em;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>A4 Test Report<span style="float: right;">20 points 🥳</span></h1>
+    2020-06-12 16:59:17 UTC<br>
+    37 tests &mdash; 37 passed / 0 failed<br>
+    <br>
+    20 points<br>
+    &minus;0 points for failed tests<br>
+    = 20 points total<br>
+    <br>
+    Random seed: 1<br>
+
+    <h2>Cart.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Cart page shows empty message if there are no items in the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart page contains a cart item subcomponent for each item in the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart page shows correct total price</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart page &quot;Checkout&quot; button links to checkout page</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>CartItem.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Cart Item component uses framed artwork subcomponent</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart Item component uses museum label subcomponent</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart Item component shows correct frame description</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart Item component shows correct price</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Cart Item component &quot;x&quot; button removes item from shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>Checkout.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Checkout page redirects to cart page if shopping cart is empty</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page displays correct subtotal</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page updates shipping costs reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page updates the total price reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page implements payment process (success)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page implements payment process (failure 1)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page implements payment process (failure 2)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page shows message while processing payment</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page shows success message when payment succeeds</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page shows error message when payment fails (1)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Checkout page shows error message when payment fails (2)</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>Config.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Config page contains frame width slider subcomponent</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page contains frame style picker subcomponent</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page contains mat width slider subcomponent</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page contains mat color picker subcomponent</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page updates frame width reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page updates frame style reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page updates mat width reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page updates mat color reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page updates price reactively</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page &quot;Add to Cart&quot; button adds an item to the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Config page redirects to cart page after adding an item to the shopping cart</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+    <h2>WidthSlider.test.js</h2>
+    <table>
+        <tr class="passed">
+            <td>Width Slider component uses &quot;value&quot; prop to set initial text field value</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Width Slider component uses &quot;value&quot; prop to set range slider value</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Width Slider component emits &quot;input&quot; event when the text field value changes</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Width Slider component emits &quot;input&quot; event when the range slider value changes</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Width Slider component ensures values are within range</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+        <tr class="passed">
+            <td>Width Slider component performs decimal truncation</td>
+            <td class="points"></td>
+        </tr>
+
+
+
+    </table>
+</body>
+
+</html>
